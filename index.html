@@ -6,46 +6,115 @@
     <title>Rajesh's Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        header { background: #333; color: #fff; padding: 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; }
-        main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-        .section { margin: 2rem 0; padding: 1.5rem; background: #f4f4f4; border-radius: 5px; }
-        footer { background: #333; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #333; background: #fafafa; }
+        header { background: #2c3e50; color: #fff; padding: 2.5rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.25rem; }
+        header p { opacity: 0.85; }
+        main { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+        .section { margin: 1.5rem 0; padding: 1.5rem; background: #fff; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .section h2 { margin-bottom: 1rem; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        .projects { list-style: none; display: grid; gap: 1rem; }
+        .projects li { padding: 1rem; border: 1px solid #eee; border-radius: 5px; transition: border-color 0.15s ease; }
+        .projects li:hover { border-color: #0066cc; }
+        .projects h3 { margin-bottom: 0.25rem; font-size: 1.05rem; }
+        .projects h3 a { color: #0066cc; text-decoration: none; }
+        .projects h3 a:hover { text-decoration: underline; }
+        .meta { font-size: 0.8rem; color: #888; margin-bottom: 0.4rem; }
+        .tag { display: inline-block; background: #eef3f8; color: #2c3e50; padding: 0.1rem 0.5rem; border-radius: 3px; margin-right: 0.3rem; font-size: 0.75rem; }
+        .links a { color: #0066cc; text-decoration: none; margin-right: 0.75rem; font-size: 0.85rem; }
+        .links a:hover { text-decoration: underline; }
+        .skills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .skills span { background: #eef3f8; color: #2c3e50; padding: 0.25rem 0.65rem; border-radius: 3px; font-size: 0.85rem; }
+        footer { text-align: center; padding: 1.5rem; color: #666; font-size: 0.9rem; margin-top: 2rem; }
+        a { color: #0066cc; }
     </style>
 </head>
 <body>
     <header>
         <h1>Rajesh's Portfolio</h1>
-        <p>Software DevOps Engineer</p>
+        <p>Software DevOps Engineer &middot; AI/Agentic Systems</p>
     </header>
-    
+
     <main>
         <div class="section">
             <h2>About Me</h2>
-            <p>Welcome to my GitHub Pages site. I'm working on various projects related to Elasticsearch, Container Orchestrations - Nomad, Kubernetes, Docker-Docker compose, Jenkins, Github actions and Cloud Infrastructure - GCP, AWS.</p>
+            <p>I work across DevOps, cloud infrastructure, and increasingly on agentic AI systems. My recent focus is on building LangGraph-based agents and full-stack community apps, alongside ongoing work in container orchestration (Kubernetes, Nomad, Docker), CI/CD (Jenkins, GitHub Actions), Elasticsearch, and cloud platforms (GCP, AWS).</p>
         </div>
-        
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span>Python</span>
+                <span>TypeScript</span>
+                <span>LangGraph</span>
+                <span>LangSmith</span>
+                <span>React Native / Expo</span>
+                <span>Supabase</span>
+                <span>Kubernetes</span>
+                <span>Nomad</span>
+                <span>Docker</span>
+                <span>Jenkins</span>
+                <span>GitHub Actions</span>
+                <span>Ansible</span>
+                <span>Elasticsearch</span>
+                <span>GCP</span>
+                <span>AWS</span>
+                <span>Shell</span>
+                <span>Ruby</span>
+            </div>
+        </div>
+
         <div class="section">
             <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/rajeshkr2016/kube-jenkins">CICD - Kubernetes/ Jenkins/ Helm Setup</a></li>
-                <li><a href="https://github.com/rajeshkr2016/collections">Collections - Python, ansible, Shell scripts</a></li>
-                <li><a href="https://github.com/rajeshkr2016/i2cssh">i2cssh fork that works with Mac Keychain/ Passwords for automated login</a></li>
-                <li><a href="https://github.com/rajeshkr2016">More on GitHub</a></li>
+            <ul class="projects">
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/agentic_ai">agentic_ai &mdash; Log Analyzer Agent</a></h3>
+                    <div class="meta"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">LangSmith</span></div>
+                    <p>A LangGraph-based agent that analyzes logs using tool calls, with a small evaluation dataset and a debug-improve loop wired through LangSmith experiments.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/bkb-app">bkb-app &mdash; BKB Community App</a></h3>
+                    <div class="meta"><span class="tag">TypeScript</span><span class="tag">Expo / React Native</span><span class="tag">Supabase</span></div>
+                    <p>A community mobile app built with Expo and Supabase. Hub for multiple modules &mdash; Dating, Events, Hiking &mdash; with more (Helpline, Career, Marketplace) on the roadmap.</p>
+                    <div class="links"><a href="https://rajeshkr2016.github.io/bkb-app/">Live demo</a></div>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/utils">utils &mdash; Daily-use Utilities</a></h3>
+                    <div class="meta"><span class="tag">Python</span></div>
+                    <p>Small Python tools for everyday needs. Includes <em>costco_gas_prices.py</em>, which fetches real-time Costco gas prices via their internal API (using curl_cffi to bypass Akamai protection) and OpenStreetMap geocoding.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/content-github-actions">content-github-actions</a></h3>
+                    <div class="meta"><span class="tag">GitHub Actions</span><span class="tag">AWS Lambda</span></div>
+                    <p>Lesson repository for a GitHub Actions Deep Dive course &mdash; a Lambda function deployed via a GitHub Actions workflow.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/i2cssh">i2cssh &mdash; Keychain-aware fork</a></h3>
+                    <div class="meta"><span class="tag">Ruby</span><span class="tag">macOS</span></div>
+                    <p>Fork of i2cssh integrated with macOS Keychain Access for automated SSH login &mdash; uses iTerm2 split panes to broadcast commands to multiple hosts.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/collections">collections</a></h3>
+                    <div class="meta"><span class="tag">Python</span><span class="tag">Ansible</span><span class="tag">Perl</span></div>
+                    <p>A grab-bag of automation: Python utilities, Ansible playbooks for VM/cloud provisioning, and <em>smtpmail.pl</em> &mdash; a security-compliant mailx alternative.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/rajeshkr2016/training">training &mdash; learnPython</a></h3>
+                    <div class="meta"><span class="tag">Python</span></div>
+                    <p>Personal Python study repository.</p>
+                </li>
             </ul>
+            <p style="margin-top: 1rem;">More on <a href="https://github.com/rajeshkr2016">GitHub</a>.</p>
         </div>
-        
+
         <div class="section">
             <h2>Contact</h2>
-            <p>You can find me on <a href="https://github.com/rajeshkr2016">GitHub</a></p>
+            <p>Find me on <a href="https://github.com/rajeshkr2016">GitHub</a>.</p>
         </div>
     </main>
-    
+
     <footer>
-        <p>&copy; 2025 Rajesh. All rights reserved.</p>
+        <p>&copy; 2026 Rajesh. All rights reserved.</p>
     </footer>
 </body>
 </html>
